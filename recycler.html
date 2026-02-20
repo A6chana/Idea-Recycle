@@ -1,0 +1,32 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Idea Recycler</title>
+    <link rel="stylesheet" href="recycler-style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>♻ IDEA RECYCLER</h1>
+        <p>Turn boring ideas into futuristic innovations!</p>
+
+        <input type="text" id="ideaInput" placeholder="Enter your boring idea...">
+        <label for="level">Creativity Level:</label>
+        <select id="level">
+            <option value="1">Basic</option>
+            <option value="2">Advanced</option>
+            <option value="3">Futuristic</option>
+            <option value="4">Crazy Innovation 🚀</option>
+        </select>
+        <button onclick="recycleIdea()">Recycle Idea</button>
+
+        <div id="loading" class="hidden">Recycling creativity...</div>
+
+        <div id="output"></div>
+    </div>
+
+    <script src="recycler-engine.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</body>
+</html>

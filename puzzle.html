@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Memory Hack Puzzle</title>
+    <link rel="stylesheet" href="recycler-style.css">
+    <style>
+        .color-grid { display: grid; grid-template-columns: repeat(2, 120px); gap: 20px; justify-content: center; margin-top: 20px; }
+        .color-box { width: 120px; height: 120px; cursor: pointer; border-radius: 15px; }
+    </style>
+</head>
+<body onload="checkLogin()">
+
+<div class="color-container">
+    <h2>🔐 Memory Hacker Challenge</h2>
+    <p>Watch the sequence carefully. Repeat it correctly to unlock.</p>
+    <p id="message"></p>
+    <div id="colorGrid" class="color-grid"></div>
+</div>
+
+<script src="auth.js"></script>
+<script>
+const colors = ["green","blue","red","purple"];
+let sequence = [];
+let userSequence = [];
+let level = 3;
+
+function shuffle(array) { return array.sort(() => Math.random() - 0.5); }
+
+function buildGrid() {
+    const grid = document.getElementById("colorGrid");
+    grid.innerHTML = "";
+    const shuffled = shuffle([...colors]);
+    shuffled.forEach(color => {
+        const box = document.createElement("div");
+        box.classList.add("color-box");
+        box.style.backgroundColor = color;
+        box.onclick = () => selectColor(color);
+        grid.appendChild(box);
+    });
+}
+
+function startGame() {
+    sequence = [];
+    userSequence = [];
+    document.getElementById("message").innerText = "Memorize...";
+    for (let i = 0; i < level; i++) {
+        sequence.push(colors[Math.floor(Math.random() * colors.length)]);
+    }
+    flashSequence();
+}
+
+function flashSequence() {
+    let i = 0;
+    const interval = setInterval(() => {
+        const color = sequence[i];
+        const box = [...document.querySelectorAll(".color-box")].find(b => b.style.backgroundColor === color);
+        if (box) { box.style.opacity = "0.3"; setTimeout(() => { box.style.opacity = "1"; }, 400); }
+        i++;
+        if (i >= sequence.length) {
+            clearInterval(interval);
+            document.getElementById("message").innerText = "Now repeat!";
+        }
+    }, 800);
+}
+
+function selectColor(color) {
+    userSequence.push(color);
+    if (userSequence.length === sequence.length) {
+        checkSequence();
+    }
+}
+
+function checkSequence() {
+    if (JSON.stringify(userSequence) === JSON.stringify(sequence)) {
+        document.getElementById("message").innerText = "Access Granted 🎉";
+        setTimeout(() => { window.location.href = "recycler.html"; }, 1000);
+    } else {
+        document.getElementById("message").innerText = "Wrong! Try Again.";
+        setTimeout(() => { buildGrid(); startGame(); }, 1000);
+    }
+}
+
+window.onload = () => { buildGrid(); startGame(); };
+</script>
+</body>
+</html>
