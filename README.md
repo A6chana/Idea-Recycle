@@ -13,7 +13,7 @@
 - Member 2: Katherrin Soben - College of Engineering,Kallooppara
 
 ### Hosted Project Link
-[mention your project hosted link here]
+[(https://github.com/A6chana/Idea-Recycle?tab=readme-ov-file#hosted-project-link)]
 
 ### Project Description
 “Our platform solves creative block using template-based innovation simulation.
