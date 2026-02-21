@@ -13,7 +13,7 @@
 - Member 2: Katherrin Soben - College of Engineering,Kallooppara
 
 ### Hosted Project Link
-https://a6chana.github.io/Idea-Recycle/recycler.html
+https://a6chana.github.io/Idea-Recycle/index.html
 
 ### Project Description
 “Our platform solves creative block using template-based innovation simulation.
