@@ -9,21 +9,21 @@
 ### Team Name: [Infinix]
 
 ### Team Members
-- Member 1: [Archana Binu] - [College of Engineering,Kallooppara]
-- Member 2: [Katherrin Soben] - [College of Engineering,Kallooppara]
+- Member 1: Archana Binu - College of Engineering,Kallooppara
+- Member 2: Katherrin Soben - College of Engineering,Kallooppara
 
 ### Hosted Project Link
 [mention your project hosted link here]
 
 ### Project Description
-[“Our platform solves creative block using template-based innovation simulation.
+“Our platform solves creative block using template-based innovation simulation.
 It combines emerging technologies with existing ideas to generate futuristic solutions instantly.”]
 
 ### The Problem statement
-[The puzzle and recycler pages must only be accessible after a user successfully signs in, and the START button should become functional only when the user is authenticated.]
+The puzzle and recycler pages must only be accessible after a user successfully signs in, and the START button should become functional only when the user is authenticated.
 
 ### The Solution
-[it converts a boring idea into a creative and innovative idea]
+It converts a boring idea into a creative and innovative idea.
 
 ---
 
@@ -32,14 +32,14 @@ It combines emerging technologies with existing ideas to generate futuristic sol
 ### Technologies/Components Used
 
 **For Software:**
-- Languages used: [ JavaScript, CSS, HTML]
-- Frameworks used: [ JavaScript , CSS, HTML]
-- Libraries used: [JavaScript , CSS, HTML]
-- Tools used: [VS Code, ChatGPT, Copilot ]
+- Languages used:  JavaScript, CSS, HTML
+- Frameworks used: JavaScript , CSS, HTML
+- Libraries used: JavaScript , CSS, HTML
+- Tools used: VS Code, ChatGPT, Copilot 
 
 **For Hardware:**
-- Main components: [login page,account page,memory puzzle,idea recycler engine]
-- Specifications: [The system should load user data, restrict navigation, and smoothly guide the user from login → puzzle → recycler engine.]
+- Main components: login page,account page,memory puzzle,idea recycler engine
+- Specifications: The system should load user data, restrict navigation, and smoothly guide the user from login → puzzle → recycler engine.
 - Tools required: [HTML,CSS,Vanilla Javascript,VS code,]
 
 ---
@@ -47,10 +47,10 @@ It combines emerging technologies with existing ideas to generate futuristic sol
 ## Features
 
 List the key features of your project:
-- Feature 1: [User Authentication]
-- Feature 2: [Login-Controlled START Button]
-- Feature 3: [Memory Puzzle Gateway]
-- Feature 4: [Idea Recycling Engine]
+- Feature 1: User Authentication
+- Feature 2: Login-Controlled START Button
+- Feature 3: Memory Puzzle Gateway
+- Feature 4: Idea Recycling Engine
 
 ---
 
@@ -73,7 +73,7 @@ cd <project-folder>]
 ### For Hardware:
 
 #### Components Required
-[Computer or Laptop,Keyboard & Mouse,Monitor/Display,Internet Connection]
+Computer or Laptop,Keyboard & Mouse,Monitor/Display,Internet Connection
 
 #### Circuit Setup
 []
@@ -132,8 +132,9 @@ cd <project-folder>]
 ![Build](Add photos of build process here)
 *Explain the build steps*
 
-![Final](Add photo of final product here)
-*Explain the final build*
+![Final](<img width="940" height="416" alt="image" src="https://github.com/user-attachments/assets/a1455922-d449-4f43-ba54-5641669e25fc" />
+)
+
 
 ---
 
@@ -143,7 +144,7 @@ cd <project-folder>]
 
 #### API Documentation
 
-**Base URL:** `https://api.yourproject.com`
+**Base URL:** `http://127.0.0.1:5500/index.html`
 
 ##### Endpoints
 
@@ -163,17 +164,20 @@ cd <project-folder>]
 **POST /api/endpoint**
 - **Description:** [What it does]
 - **Request Body:**
-```json
+ ```json
 {
-  "field1": "value1",
-  "field2": "value2"
+  "name": "Archana Binu",
+  "email": "archana@example.com",
+  "password": "securepassword"
 }
-```
 - **Response:**
-```json
+ ```json
 {
   "status": "success",
-  "message": "Operation completed"
+  "message": "User registered successfully",
+  "data": {
+    "user_id": 101
+  }
 }
 ```
 
@@ -185,7 +189,8 @@ cd <project-folder>]
 
 #### App Flow Diagram
 
-![App Flow](docs/app-flow.png)
+![App Flow](<img width="853" height="1280" alt="image" src="https://github.com/user-attachments/assets/19b8bb41-d213-47e0-b39f-39ad6e4f1e2e" />
+)
 *Explain the user flow through your application*
 
 #### Installation Guide
