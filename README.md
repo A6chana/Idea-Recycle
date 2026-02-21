@@ -14,7 +14,6 @@
 
 ### Hosted Project Link
 https://a6chana.github.io/Idea-Recycle/index.html
-
 ### Project Description
 “Our platform solves creative block using template-based innovation simulation.
 It combines emerging technologies with existing ideas to generate futuristic solutions instantly.”]
